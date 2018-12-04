@@ -10,7 +10,7 @@
    "default_title": "Have a good day"
  },
 "chrome_url_overrides" : {
-  "newtab": "uniqueimage.html":"secret.html":"confirm.html"
+  "newtab": "uniqueimage.html":"secret.html":"confirm.html":"home.html"
 },
  "permissions": ["activeTab"]
 }

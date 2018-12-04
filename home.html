@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+                  <!-- CSS-->
+                  <link rel="stylesheet" href="style.css">
+                  <link rel="stylesheet" href="CSS/bootstrap.css">
+</head>
+<body>
+
+    <!-- Navbar-->
+   
+    <header>
+            <nav id='cssmenu'>
+            <div class="logo"><a href="#">MetaMask </a></div>
+            <div id="head-mobile"></div>
+            <div class="button"></div>
+            <ul class="float-right">
+
+                    
+            <li><a href='#'>Ropsten Test Network</a>
+               <ul>
+                  <li><a href='#'>Select network</a>
+                     <ul>
+                        <li><a href='#'>Main network</a></li>
+                        <li><a href='#'>Ropston network</a></li>
+                        <li><a href='#'>Kovan network</a></li>
+                        <li><a href='#'>Local 8545</a></li>
+                        <li><a href='#'>Rinkeby network</a></li>
+                        <li><a href='#'>Custom RPC</a></li>
+                     </ul>
+                  </li>
+                 
+
+
+            </ul>
+            <li><img src="images/user.png" alt="" class="profile-image">
+                <ul>
+                   <li><a href='#'>My Accounts</a></li>
+                   <li><a href='#'>Log Out</a></li>
+                   <li><a href='#'>Create Account</a></li>
+                   <li><a href='#'>Import Account</a></li>
+                   <li><a href='#'>Connect Hardware Wallet</a></li>
+                   <li><a href='#'>Info & Help</a></li>
+                   <li><a href='#'>Settings</a></li>
+                  
+ 
+ 
+             </ul>
+            
+
+            </nav>
+            </header>
+
+
+
+    <!-- end of navbar-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 bg-col text-center">
+                <img src="images/user.png" alt="" class="user-image1 mb-3">
+                <a href="#" class="details">Details</a>
+                <p class="key mt-3">0xe333..dd333</p>
+
+                <div class="ether">
+                    <div class="row">
+                        <div class="col-md-4">
+                <img src="images/ethereum.png" alt="" class="ether-logo">
+            </div>
+                
+                <div class="col-md-3 cost">
+                    <p>0 ETH</p>
+                    <p>$0.00 USD</p>
+                </div>
+
+            
+            </div>
+        </div>
+        <div class="profile-sum text-center">
+        <p>Don't see your tokens?</p>
+        <p>Click on Add Token to add them to <br> your account</p>
+
+        <a href="#">ADD TOKEN</a>
+    </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                <img src="images/ethereum.png" alt="" class="ether-logo">
+            </div>
+            <div class="col-md-5">
+                <p>0 ETH</p>
+                <p>$0.00 USD</p>
+            </div>
+            <div class="col-md-2">
+                <button class="deposit-send mt-3"><a href="#">DEPOSIT</a></button>
+            </div>
+            <div class="col-md-2">
+                <button class="deposit-send mt-3"><a href="#">SEND</a></button>
+            </div>
+            <div class="col-md-12 history">
+            <p>History</p>
+        </div>
+        <div class="col-md-12">
+            <hr>
+        </div>
+            <div class="col-md-12 transactions">
+            <p>You have no transactions</p>
+        </div>
+            </div>
+        </div>
+        
+        </div>
+        
+    </div>
+  <!-- Scripts-->
+  <script src="js/bootstrap.js"></script>   
+  <script src="js/jquery.min.js"></script>
+  <script>
+  (function($) {
+$.fn.menumaker = function(options) {  
+ var cssmenu = $(this), settings = $.extend({
+   format: "dropdown",
+   sticky: false
+ }, options);
+ return this.each(function() {
+   $(this).find(".button").on('click', function(){
+     $(this).toggleClass('menu-opened');
+     var mainmenu = $(this).next('ul');
+     if (mainmenu.hasClass('open')) { 
+       mainmenu.slideToggle().removeClass('open');
+     }
+     else {
+       mainmenu.slideToggle().addClass('open');
+       if (settings.format === "dropdown") {
+         mainmenu.find('ul').show();
+       }
+     }
+   });
+   cssmenu.find('li ul').parent().addClass('has-sub');
+multiTg = function() {
+     cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+     cssmenu.find('.submenu-button').on('click', function() {
+       $(this).toggleClass('submenu-opened');
+       if ($(this).siblings('ul').hasClass('open')) {
+         $(this).siblings('ul').removeClass('open').slideToggle();
+       }
+       else {
+         $(this).siblings('ul').addClass('open').slideToggle();
+       }
+     });
+   };
+   if (settings.format === 'multitoggle') multiTg();
+   else cssmenu.addClass('dropdown');
+   if (settings.sticky === true) cssmenu.css('position', 'fixed');
+resizeFix = function() {
+  var mediasize = 1000;
+     if ($( window ).width() > mediasize) {
+       cssmenu.find('ul').show();
+     }
+     if ($(window).width() <= mediasize) {
+       cssmenu.find('ul').hide().removeClass('open');
+     }
+   };
+   resizeFix();
+   return $(window).on('resize', resizeFix);
+ });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+$("#cssmenu").menumaker({
+   format: "multitoggle"
+});
+});
+})(jQuery);
+
+  </script>
+
+</body>
+</html>
