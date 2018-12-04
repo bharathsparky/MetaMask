@@ -23,6 +23,7 @@
 .user-image{
     max-width: 100px;
     margin-top: 5px;
+    display: block;
 }
 
 .extenstion{
@@ -43,4 +44,22 @@
     background-color: grey;
     padding: 20px;
     border-radius: 4px;
+}
+
+.create-but a,.secret-but a{
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
+
+.words{
+    margin-top: 30px;
+}
+
+.words span{
+    border: 2px solid black;
+    padding: 10px 40px 10px 40px;
+    background-color: #eee;
+    font-size: 20px;
+    
 }
