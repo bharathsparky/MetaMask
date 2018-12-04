@@ -35,3 +35,12 @@
     margin-right: 50px !important;
     margin-bottom: 30px !important;
 }
+#secretcode{
+    display: none;
+}
+.secret-but{
+    color: #fff;
+    background-color: grey;
+    padding: 20px;
+    border-radius: 4px;
+}
