@@ -205,3 +205,54 @@ nav{width:100%;}
     max-width: 40px;
     margin-left: 40px;
 }
+
+.new-account{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.create-cancel a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #CBB3C6;
+    color: rgba(17, 14, 20, 0.781);
+    text-decoration: none;
+    border-style: none;
+    font-weight: 600;
+
+}
+
+.acc-section{
+    border: 2px solid #eee;
+    background-color: #fff !important;
+    padding-bottom: 50px;
+    
+    
+    
+}
+
+.bg-wrap{
+    background-color: #eee;
+    height: 100vh;
+}
+
+.acc-head{
+    font-size: 1.8rem;
+}
+
+.create-head{
+    font-size: 1.4rem;
+    margin-top: 30px;
+    color: #8B3A60;
+}
+
+.selectkey{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.key-string{
+    margin-bottom: 20px;
+}
