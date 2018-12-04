@@ -1,0 +1,22 @@
+.create-head{
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.confirmpass-head{
+    margin-top: 10px;
+}
+
+.create-but{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    color: white;
+    background-color: blueviolet;
+    font-weight: 500;
+    font-size: 20px;
+}
+
